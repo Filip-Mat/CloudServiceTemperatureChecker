@@ -1,0 +1,47 @@
+# ESP32 credentials (keep example templates available to commit)
+secrets.h
+
+
+# Environment variables and local AWS credentials
+.env
+.env.*
+!.env.example
+!.env.*.example
+.aws/
+
+# Device certificates and private keys
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+build/
+coverage/
+*.tsbuildinfo
+.pio/
+
+# Generated Amplify configuration and local state
+.amplify/
+amplify_outputs*
+amplifyconfiguration*
+
+# Logs and local files
+logs/
+*.log
+*.local
+
+# Editor and operating system files
+.idea/
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo

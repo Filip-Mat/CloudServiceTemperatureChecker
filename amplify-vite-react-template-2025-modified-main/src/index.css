@@ -1,0 +1,158 @@
+body {
+  margin: 0;
+  min-width: 280px;
+  background: #eff4f3;
+  color: #152f2d;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.dashboard {
+  --accent: #076a61;
+  --muted: #4e6663;
+  --line: #d8e5e2;
+  --amplify-components-button-primary-background-color: var(--accent);
+  --amplify-components-button-primary-hover-background-color: #05554e;
+  min-height: 100vh;
+}
+
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid var(--line);
+  background: #fff;
+}
+
+.dashboard-header-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 13px clamp(16px, 4vw, 40px);
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: none;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  font-weight: 750;
+  color: #152f2d;
+  cursor: pointer;
+}
+
+.dashboard-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  color: white;
+  background: var(--accent);
+  font-size: 25px;
+  line-height: 1;
+}
+
+.dashboard-nav {
+  display: flex;
+  gap: 4px;
+  padding: 3px;
+  background: #eff4f3;
+  border-radius: 9px;
+}
+
+.dashboard .dashboard-nav button {
+  border: 0;
+  border-radius: 7px;
+  color: var(--muted);
+}
+
+.dashboard .dashboard-nav button[aria-current="page"] {
+  background: white;
+  color: var(--accent);
+  box-shadow: 0 1px 3px #17383226;
+}
+
+.dashboard-account {
+  min-width: 0;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dashboard-identity {
+  min-width: 0;
+  display: grid;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.dashboard-identity strong {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #152f2d;
+  font-size: .9rem;
+}
+
+.dashboard .sign-out { flex: none; white-space: nowrap; }
+
+.dashboard-main {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 58px) clamp(16px, 4vw, 40px);
+}
+
+.page-heading { margin-bottom: 22px; }
+.page-heading h1 {
+  margin: 0;
+  font-size: clamp(1.85rem, 4vw, 2.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+}
+
+.dashboard-panel,
+.dashboard .device-card {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: clamp(16px, 3vw, 28px);
+  box-shadow: 0 6px 24px #1f433409;
+}
+
+.graph-controls { max-width: 340px; margin-bottom: 24px; }
+.temperature-chart { height: clamp(255px, 48vw, 440px); }
+.dashboard-empty { padding: 32px 12px; text-align: center; color: var(--muted); }
+.dashboard-error { color: #992e28; }
+.register-panel { margin-bottom: 24px; }
+.register-panel h2 { margin: 0 0 14px; font-size: 1.15rem; }
+.register-form { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) auto; gap: 16px; align-items: start; }
+.register-form > button { align-self: start; margin-top: 29px; }
+.device-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 18px; align-items: start; }
+.device-card { min-width: 0; display: grid; gap: 16px; }
+.device-card h2 { margin: 0; font-size: 1.15rem; overflow-wrap: anywhere; }
+.device-card p { margin: 0; }
+.device-card-heading,
+.device-card-actions { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+.device-meta { color: var(--muted); font-size: .875rem; }
+.device-settings { display: grid; gap: 12px; border-top: 1px solid var(--line); padding-top: 16px; }
+.device-settings h3 { margin: 0; font-size: 1rem; }
+.device-form { display: grid; gap: 12px; }
+.device-form button { justify-self: start; }
+.limit-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.interval-status { display: flex; gap: 8px 16px; flex-wrap: wrap; color: var(--muted); font-size: .875rem; }
+.interval-status strong { color: #152f2d; }
+
+@media (max-width: 600px) {
+  .dashboard-header-inner { gap: 10px; flex-wrap: wrap; }
+  .dashboard-account { flex: 1 1 190px; justify-content: flex-end; }
+  .dashboard-nav { order: 1; flex-basis: 100%; }
+  .dashboard-nav > button { flex: 1; }
+  .register-form { grid-template-columns: 1fr; }
+  .register-form > button { margin-top: 0; justify-self: start; }
+}
