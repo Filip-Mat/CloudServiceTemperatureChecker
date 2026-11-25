@@ -6,19 +6,27 @@
 
 This project collects temperature measurements and displays them in a graph using a ESP32 with a DHT11 sensor.
 Reasoning to why i created this project is because i do not have a way to check temperature in my room so i wanted to create a way to do just that.
+I wanted to see if you got under or over certain temperatures to know if it was hot enough to turn on ac or cold enough to turn on the heat.
 
 ## Security
 
-This project uses Cognito to make it so you have to create an account with verification and can only access devices on that account. Each ESP32 needs to have certificates inorder to send MQTT data to the IoTCore
+This project uses Amazon Cognito to manage user registration and login. Users must verify their email address before they can sign in. Each account
+can only manage its own registered devices including viewing their graphs and changing device settings.
+Each ESP32 uses a certificate and needs to know the AWS IoT Endpoint in order to communicate with the IoT-Core.
+Wifi and the Certificate is excluded from git with gitignore.
 
 ## Scalability
 
-The project is scalable because we are using AWS so you can have as many devices you want aslong as you pay for the amount you will be using.
+The project uses AWS cloud services to support additional devices and users as the system grows. This makes it so we reduce the need to maintain
+servers manually, however scaling is still subject to costs. So the more we scale the more we need to pay.
 
 ## How to use
 
-You will need a AWS account to setup IoTCores and setup rules so the Device Shadow is working.
-To use the esp32 you will need to set you wifi, aws IoT endpont and certificates in secrets.h
+To set up the project, you need an AWS account with the backend services deployed and the required AWS IoT Core rules configured
+to process temperature data and Device Shadow updates.
+
+Before uploading the code to the ESP32, add your Wi-Fi credentials, AWS IoT endpoint, device certificate, and private key to secrets.h.
+Once connected the device can send temperature measurements and receive commands through its Device Shadow.
 
 ## Software and cloud services
 
