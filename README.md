@@ -1,6 +1,7 @@
 # System architecture
 
 ![System architecture](images/ArchitectureDiagramFilip.png)
+
 Made with draw.io
 
 ## Intoduction
