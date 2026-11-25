@@ -1,6 +1,6 @@
 # System architecture
 
-![System architecture](images/ArchitectureDiagramFilip.drawio.png)
+![System architecture](images/ArchitectureDiagramFilip.png)
 
 ## Intoduction
 
