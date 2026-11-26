@@ -20,7 +20,8 @@ Wifi and the Certificate is excluded from git with gitignore.
 ## Scalability
 
 The project uses AWS cloud services to support additional devices and users as the system grows. This makes it so we reduce the need to maintain
-servers manually, however scaling is still subject to costs. So the more we scale the more we need to pay.
+servers manually, however scaling is still subject to costs. So the more we scale the more we need to pay. What could be added is a Amazon S3 storage that
+hold archived data from the previous year. Once archived the data is removed from DynamoDB.
 
 ## How to use
 
