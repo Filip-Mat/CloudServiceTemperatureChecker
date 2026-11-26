@@ -21,7 +21,8 @@ Wifi and the Certificate is excluded from git with gitignore.
 
 The project uses AWS cloud services to support additional devices and users as the system grows. This makes it so we reduce the need to maintain
 servers manually, however scaling is still subject to costs. So the more we scale the more we need to pay. What could be added is a Amazon S3 storage that
-hold archived data from the previous year. Once archived the data is removed from DynamoDB.
+hold archived data from the previous year. Once archived the data is removed from DynamoDB. To keep the costs down while still have the possiblilty
+to check data from previous years
 
 ## How to use
 
